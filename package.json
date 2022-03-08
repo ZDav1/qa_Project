@@ -1,0 +1,26 @@
+{
+  "name": "qa_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZDav1/qa_Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZDav1/qa_Project/issues"
+  },
+  "homepage": "https://github.com/ZDav1/qa_Project#readme",
+  "dependencies": {
+    "@types/selenium-webdriver": "^4.0.18",
+    "chromedriver": "^99.0.0",
+    "geckodriver": "^3.0.1",
+    "selenium-webdriver": "^4.1.1"
+  }
+}
