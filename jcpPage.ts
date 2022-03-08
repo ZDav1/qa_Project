@@ -20,6 +20,7 @@ export class JCP extends BasePage {
     shoppingCart: By = By.xpath(`//div[@class="_2IWk1"]`);
     twitterLink: By = By.xpath(`//a[@aria-label="Twitter"]`);
     hyperLink: By = By.xpath(`//a[@href="/d/toys-and-games"]`);
+    twitterLogo: By = By.xpath(`//span[@class="css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0"]`);
 
 
 
