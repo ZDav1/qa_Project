@@ -10,6 +10,15 @@ test("Search Bar Test", async () => {
     await jcp.search("pants");
     expect(await jcp.getResults()).toContain("pants")
 })
+    
+test("Complex Search Bar Test", async () => {
+    await jcp.navigate();
+    await jcp.search("men's big and tall long-sleeve flannel shirts")
+    expect(await jcp.getResults()).toContain("men")
+    expect(await jcp.getResults()).toContain("Big and Tall")
+    expect(await jcp.getResults()).toContain("Long-Sleeve")
+    expect(await jcp.getResults()).toContain("Flannel")
+})
 
 
 test("User Login Test", async () => {
