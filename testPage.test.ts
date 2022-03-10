@@ -7,10 +7,12 @@ const jcp = new JCP;
 //Benjamin's Tests
 test("Search Bar Test", async () => {
     await jcp.navigate();
+    await jcp.driver.manage().window().maximize();
     await jcp.search("pants");
     expect(await jcp.getResults()).toContain("pants")
 })
     
+
 test("Complex Search Bar Test", async () => {
     await jcp.navigate();
     await jcp.search("men's big and tall long-sleeve flannel shirts")
@@ -34,13 +36,22 @@ test("User Login Test", async () => {
 })
 
 
-test("Location Selector Test", async () => {
+test("Location Search Selector Test", async () => {
     await jcp.navigate();
     await jcp.click(jcp.locationSelector);
     await jcp.click(jcp.locationSearchBar);
     await jcp.setInput(jcp.locationSearchBar, "Provo Utah");
     await jcp.click(jcp.locationSearchButton);
     expect(await jcp.listOfLocations()).toContain("PROVO");
-    await jcp.driver.quit()
 
+})
+
+
+test("Location Manual Selector Test", async () => {
+    await jcp.navigate();
+    await jcp.click(jcp.locationSelector);
+    await jcp.click(jcp.manualFlorida);
+    await jcp.click(jcp.manualTampa);
+    expect(await jcp.listOfLocations()).toContain("TAMPA");
+    await jcp.driver.quit()
 })

@@ -9,6 +9,8 @@ export class JCP extends BasePage {
     locationSearchBar: By = By.xpath('//input[@class="search-input"]')
     locationSearchButton: By = By.xpath('//button[@type="submit"]')
     myAccount: By = By.xpath('(//div[@class="_2IWk1 flex flex-row mt-1"])')
+    manualFlorida: By = By.xpath('(//a[@class="Directory-listLink"])[9]')
+    manualTampa: By = By.xpath('(//a[@class="Directory-listLink"])[38]')
     loginEmail: By = By.xpath('//input[@id="loginEmail"]')
     loginPassword: By = By.xpath('//input[@data-automation-id="passwrod_input"]')
     signInButton: By = By.xpath('//button[@data-automation-id="signin_button"]')
