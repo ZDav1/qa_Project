@@ -16,10 +16,10 @@ export class JCP extends BasePage {
     signInButton: By = By.xpath('//button[@data-automation-id="signin_button"]')
     createAccountButton: By = By.xpath('//button[@data-automation-id="create_account_button"]')
 
-    loginButtonName: By = By.xpath('(//p[@data-automation-id="acc-user-name"])')
     constructor() {
         super({url: "https://www.jcpenney.com/"});
     }
+    loginButtonName: By = By.xpath('(//p[@data-automation-id="acc-user-name"])')
     async userName() {
         return this.getText(this.loginButtonName)
     }
