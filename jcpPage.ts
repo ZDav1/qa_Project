@@ -8,20 +8,34 @@ export class JCP extends BasePage {
     locationSelector: By = By.xpath('//div[@id="findStore"]')
     locationSearchBar: By = By.xpath('//input[@class="search-input"]')
     locationSearchButton: By = By.xpath('//button[@type="submit"]')
-    myAccount: By = By.xpath('//div[@class="_1E7u2 _3w1jh"]')
+    myAccount: By = By.xpath('(//div[@class="_2IWk1 flex flex-row mt-1"])')
     loginEmail: By = By.xpath('//input[@id="loginEmail"]')
     loginPassword: By = By.xpath('//input[@data-automation-id="passwrod_input"]')
     signInButton: By = By.xpath('//button[@data-automation-id="signin_button"]')
     createAccountButton: By = By.xpath('//button[@data-automation-id="create_account_button"]')
 
+    loginButtonName: By = By.xpath('(//p[@data-automation-id="acc-user-name"])')
+    constructor() {
+        super({url: "https://www.jcpenney.com/"});
+    }
+    async userName() {
+        return this.getText(this.loginButtonName)
+    }
+
+    locationsList: By = By.xpath('(//div[@class="col-md-6"])')
+    async listOfLocations() {
+        return this.getText(this.locationsList)
+    }
+
+
+
     //Clarissa's elements:
     
     //Zane's elements: 
 
-    results: By = By.id('rso')
-    constructor() {
-        super({url: "https://www.jcpenney.com/"});
-    }
+
+    results: By = By.id("containerWidthIris")
+   
     async search(searchTerm: string) {
         return this.setInput(this.searchBar, `${searchTerm}\n`)
     }

@@ -1,32 +1,23 @@
 {
   "name": "qa_project",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ZDav1/qa_Project.git"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ZDav1/qa_Project/issues"
-  },
-  "homepage": "https://github.com/ZDav1/qa_Project#readme",
   "dependencies": {
+    "@types/jest": "^26.0.15",
     "@types/selenium-webdriver": "^4.0.18",
-    "chromedriver": "^99.0.0",
+    "chromedriver": "^98.0.0",
     "geckodriver": "^3.0.1",
-    "selenium-webdriver": "^4.1.1"
-  },
-  "devDependencies": {
-    "@types/jest": "^27.4.1",
-    "jest": "^27.5.1",
-    "ts-jest": "^27.1.3",
-    "typescript": "^4.6.2"
-  },
-  "description": ""
+    "jest": "^26.6.3",
+    "selenium-webdriver": "^4.1.1",
+    "ts-jest": "^26.4.4",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  }
 }
