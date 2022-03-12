@@ -7,52 +7,28 @@ const jcp = new JCP;
 test("do a test", async () => {
     // navigating to jcpenny website
     await jcp.navigate();
-
     await jcp.driver.sleep(1500);
-
     await jcp.driver.manage().window().maximize();
-
 // clicking on the toys hyperlink
-
     await jcp.click(jcp.hyperLink);
-
     await jcp.driver.sleep(1500);
-
     await jcp.click(jcp.kidsToys);
-
     let stitch = await jcp.driver.findElement(By.xpath(`//a[@class="font-open-sans-semibold overflow-hidden text-gray-600 text-small SuQAn"]`));
-
     await stitch.click();
-
     let addCart = await jcp.driver.findElement(By.xpath(`//button[@type="button"]`));
 // switching to the shopping cart page
-
     await jcp.driver.wait(until.elementLocated(jcp.shoppingCart));
-
     await jcp.click(jcp.shoppingCart);
-
     await jcp.driver.sleep(3000);
-
     // switching to the twitter link
-
     await jcp.click(jcp.twitterLink);
-
     await jcp.driver.sleep(3000);
-
     let myTabs = await jcp.driver.getAllWindowHandles();
-
     await jcp.driver.switchTo().window(myTabs[1]);
-
     let myUrl = await jcp.driver.getCurrentUrl();
-
-    // console.log(myUrl);
-
     await jcp.driver.close();
-
     await jcp.driver.switchTo().window(myTabs[0]);
-
     myUrl = await jcp.driver.getCurrentUrl();
-
     // console.log(myUrl);
     await jcp.driver.sleep(1500);
     
