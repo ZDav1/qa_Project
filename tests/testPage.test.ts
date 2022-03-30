@@ -30,7 +30,7 @@ test("do a test", async () => {
     await jcp.driver.switchTo().window(myTabs[0]);
     myUrl = await jcp.driver.getCurrentUrl();
     // console.log(myUrl);
-    await jcp.driver.sleep(1500);
+    await jcp.driver.sleep(1400);
     
 
 })
